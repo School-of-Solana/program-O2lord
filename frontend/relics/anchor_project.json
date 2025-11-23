@@ -1,0 +1,2502 @@
+{
+  "address": "CtvFQBDX6GdgDL5tS8spw7rZomT2ZwAxm6C9UaEe6hxo",
+  "metadata": {
+    "name": "anchor_project",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "accept_contract",
+      "discriminator": [
+        217,
+        254,
+        164,
+        16,
+        244,
+        59,
+        30,
+        81
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "payer_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "payer"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.payer",
+                "account": "TrustPay"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "trust_pay"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": [
+        {
+          "name": "deadline_duration_seconds",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "approve_milestone_payment",
+      "discriminator": [
+        53,
+        217,
+        222,
+        102,
+        129,
+        129,
+        41,
+        223
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "recipient",
+          "writable": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "payer"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "trust_pay"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "recipient_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "recipient"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "fee_destination",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "fee_destination_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "fee_destination"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  45,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": [
+        {
+          "name": "milestone_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "cancel_contract",
+      "discriminator": [
+        3,
+        168,
+        37,
+        73,
+        140,
+        194,
+        156,
+        165
+      ],
+      "accounts": [
+        {
+          "name": "canceller",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "recipient",
+          "writable": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "payer"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "trust_pay"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "canceller_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "canceller"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "create_contract",
+      "discriminator": [
+        244,
+        48,
+        244,
+        178,
+        216,
+        88,
+        122,
+        52
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "creator_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "creator"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "payer_pubkey"
+              },
+              {
+                "kind": "arg",
+                "path": "seed"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "trust_pay"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "fee_destination"
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  45,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": [
+        {
+          "name": "seed",
+          "type": "u64"
+        },
+        {
+          "name": "creator_role",
+          "type": "u8"
+        },
+        {
+          "name": "payer_pubkey",
+          "type": "pubkey"
+        },
+        {
+          "name": "other_party",
+          "type": "pubkey"
+        },
+        {
+          "name": "contract_type",
+          "type": "u8"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "terms_and_conditions",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "u64"
+        },
+        {
+          "name": "milestone_inputs",
+          "type": {
+            "vec": {
+              "defined": {
+                "name": "MilestoneInput"
+              }
+            }
+          }
+        },
+        {
+          "name": "deadline_duration_seconds",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "decline_contract",
+      "discriminator": [
+        229,
+        120,
+        200,
+        154,
+        125,
+        221,
+        227,
+        105
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "recipient",
+          "writable": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "payer"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "trust_pay"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "recipient_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "recipient"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "dispute_contract",
+      "discriminator": [
+        233,
+        27,
+        189,
+        199,
+        113,
+        14,
+        171,
+        147
+      ],
+      "accounts": [
+        {
+          "name": "disputer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.payer",
+                "account": "TrustPay"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  45,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "milestone_index",
+          "type": "u8"
+        },
+        {
+          "name": "dispute_reason",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "mark_milestone_complete",
+      "discriminator": [
+        114,
+        143,
+        187,
+        142,
+        122,
+        215,
+        204,
+        180
+      ],
+      "accounts": [
+        {
+          "name": "recipient",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.payer",
+                "account": "TrustPay"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "milestone_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "resolve_dispute",
+      "discriminator": [
+        231,
+        6,
+        202,
+        6,
+        96,
+        103,
+        12,
+        230
+      ],
+      "accounts": [
+        {
+          "name": "resolver",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "recipient",
+          "writable": true,
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "trust_pay",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  117,
+                  115,
+                  116,
+                  45,
+                  112,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "payer"
+              },
+              {
+                "kind": "account",
+                "path": "trust_pay.seed",
+                "account": "TrustPay"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "trust_pay"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "payer_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "payer"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "recipient_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "recipient"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "fee_destination",
+          "relations": [
+            "trust_pay"
+          ]
+        },
+        {
+          "name": "fee_destination_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "fee_destination"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  45,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": [
+        {
+          "name": "milestone_index",
+          "type": "u8"
+        },
+        {
+          "name": "resolution",
+          "type": "u8"
+        },
+        {
+          "name": "resolution_reason",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "GlobalState",
+      "discriminator": [
+        163,
+        46,
+        74,
+        168,
+        216,
+        123,
+        133,
+        98
+      ]
+    },
+    {
+      "name": "TrustPay",
+      "discriminator": [
+        104,
+        170,
+        123,
+        134,
+        238,
+        211,
+        193,
+        8
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "ContractAcceptedEvent",
+      "discriminator": [
+        44,
+        179,
+        64,
+        120,
+        80,
+        175,
+        210,
+        187
+      ]
+    },
+    {
+      "name": "ContractCancelledEvent",
+      "discriminator": [
+        76,
+        25,
+        235,
+        145,
+        63,
+        105,
+        115,
+        13
+      ]
+    },
+    {
+      "name": "ContractCompletedEvent",
+      "discriminator": [
+        238,
+        230,
+        41,
+        137,
+        75,
+        119,
+        51,
+        38
+      ]
+    },
+    {
+      "name": "ContractCreatedEvent",
+      "discriminator": [
+        31,
+        162,
+        233,
+        14,
+        63,
+        40,
+        221,
+        168
+      ]
+    },
+    {
+      "name": "ContractDeclinedEvent",
+      "discriminator": [
+        196,
+        100,
+        29,
+        74,
+        229,
+        54,
+        9,
+        22
+      ]
+    },
+    {
+      "name": "DisputeCreatedEvent",
+      "discriminator": [
+        89,
+        162,
+        48,
+        158,
+        30,
+        116,
+        145,
+        247
+      ]
+    },
+    {
+      "name": "DisputeResolvedEvent",
+      "discriminator": [
+        152,
+        37,
+        98,
+        245,
+        229,
+        39,
+        150,
+        78
+      ]
+    },
+    {
+      "name": "MilestoneApprovedEvent",
+      "discriminator": [
+        149,
+        49,
+        174,
+        211,
+        26,
+        246,
+        145,
+        216
+      ]
+    },
+    {
+      "name": "MilestoneCompletedEvent",
+      "discriminator": [
+        167,
+        235,
+        168,
+        66,
+        193,
+        62,
+        51,
+        243
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "CustomError",
+      "msg": "Custom error message"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidAmount",
+      "msg": "Invalid amount specified."
+    },
+    {
+      "code": 6002,
+      "name": "TitleTooLong",
+      "msg": "Contract title is too long (max 100 characters)."
+    },
+    {
+      "code": 6003,
+      "name": "NoMilestonesProvided",
+      "msg": "No milestones provided for the contract."
+    },
+    {
+      "code": 6004,
+      "name": "TooManyMilestones",
+      "msg": "Too many milestones (max 10 allowed)."
+    },
+    {
+      "code": 6005,
+      "name": "InvalidDeadline",
+      "msg": "Invalid deadline specified."
+    },
+    {
+      "code": 6006,
+      "name": "DisputeResolutionTooLong",
+      "msg": "Dispute resolution mechanism description is too long (max 200 characters)."
+    },
+    {
+      "code": 6007,
+      "name": "TermsAndConditionsTooLong",
+      "msg": "Dispute resolution mechanism description is too long (max 200 characters)."
+    },
+    {
+      "code": 6008,
+      "name": "ContractNotAccepted",
+      "msg": "Contract has not been accepted yet."
+    },
+    {
+      "code": 6009,
+      "name": "MilestoneAmountMismatch",
+      "msg": "Milestone amounts do not sum to total contract amount."
+    },
+    {
+      "code": 6010,
+      "name": "CalculationError",
+      "msg": "Calculation error occurred."
+    },
+    {
+      "code": 6011,
+      "name": "ContractNotPending",
+      "msg": "Contract is not in pending status."
+    },
+    {
+      "code": 6012,
+      "name": "ContractExpired",
+      "msg": "Contract has expired."
+    },
+    {
+      "code": 6013,
+      "name": "ContractNotInProgress",
+      "msg": "Contract is not in progress."
+    },
+    {
+      "code": 6014,
+      "name": "ContractNotDisputed",
+      "msg": "Contract is not in disputed status."
+    },
+    {
+      "code": 6015,
+      "name": "InvalidMilestoneIndex",
+      "msg": "Invalid milestone index."
+    },
+    {
+      "code": 6016,
+      "name": "MilestoneNotPending",
+      "msg": "Milestone is not in pending status."
+    },
+    {
+      "code": 6017,
+      "name": "MilestoneNotCompleted",
+      "msg": "Milestone is not completed by service provider."
+    },
+    {
+      "code": 6018,
+      "name": "MilestoneNotDisputable",
+      "msg": "Milestone is not disputable."
+    },
+    {
+      "code": 6019,
+      "name": "MilestoneNotDisputed",
+      "msg": "Milestone is not in disputed status."
+    },
+    {
+      "code": 6020,
+      "name": "InvalidDisputeReason",
+      "msg": "Invalid dispute reason."
+    },
+    {
+      "code": 6021,
+      "name": "InvalidResolution",
+      "msg": "Invalid resolution value."
+    },
+    {
+      "code": 6022,
+      "name": "DeadlineTooFar",
+      "msg": "Deadlin is too far."
+    },
+    {
+      "code": 6023,
+      "name": "Unauthorized",
+      "msg": "You are not authorized to perform this action."
+    },
+    {
+      "code": 6024,
+      "name": "UnauthorizedDisputer",
+      "msg": "Only the payer or recipient can dispute a milestone."
+    },
+    {
+      "code": 6025,
+      "name": "UnauthorizedResolver",
+      "msg": "Only an authorized resolver can resolve a dispute."
+    },
+    {
+      "code": 6026,
+      "name": "InvalidRole",
+      "msg": "Invalid role specified. Must be 0 (payer) or 1 (recipient)."
+    },
+    {
+      "code": 6027,
+      "name": "InvalidContractType",
+      "msg": "Invalid contract type. Must be 0 (one-time payment) or 1 (milestone payment)."
+    },
+    {
+      "code": 6028,
+      "name": "PayerMismatch",
+      "msg": "Payer Mismatch"
+    }
+  ],
+  "types": [
+    {
+      "name": "ContractAcceptedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "milestone_count",
+            "type": "u8"
+          },
+          {
+            "name": "accepted_at",
+            "type": "i64"
+          },
+          {
+            "name": "deadline",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractCancelledEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "canceller",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "refunded_amount",
+            "type": "u64"
+          },
+          {
+            "name": "cancelled_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractCompletedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "completed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractCreatedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "milestone_count",
+            "type": "u8"
+          },
+          {
+            "name": "deadline",
+            "type": "i64"
+          },
+          {
+            "name": "fee_percentage",
+            "type": "u16"
+          },
+          {
+            "name": "fee_destination",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractDeclinedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "refunded_amount",
+            "type": "u64"
+          },
+          {
+            "name": "declined_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisputeCreatedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "milestone_index",
+            "type": "u8"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "disputer",
+            "type": "pubkey"
+          },
+          {
+            "name": "reason",
+            "type": "string"
+          },
+          {
+            "name": "dispute_id",
+            "type": "string"
+          },
+          {
+            "name": "disputed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisputeResolvedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "milestone_index",
+            "type": "u8"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "fee_amount",
+            "type": "u64"
+          },
+          {
+            "name": "resolver",
+            "type": "pubkey"
+          },
+          {
+            "name": "resolution",
+            "type": "u8"
+          },
+          {
+            "name": "resolution_reason",
+            "type": "string"
+          },
+          {
+            "name": "resolved_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GlobalState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_trust_pay_created",
+            "type": "u64"
+          },
+          {
+            "name": "total_trust_pay_closed",
+            "type": "u64"
+          },
+          {
+            "name": "total_confirmations",
+            "type": "u64"
+          },
+          {
+            "name": "fee_percentage",
+            "type": "u16"
+          },
+          {
+            "name": "fee_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_fees_collected",
+            "type": "u64"
+          },
+          {
+            "name": "total_disputes",
+            "type": "u64"
+          },
+          {
+            "name": "total_volume",
+            "type": "u64"
+          },
+          {
+            "name": "token_decimals",
+            "type": "u8"
+          },
+          {
+            "name": "high_watermark_volume",
+            "type": "u64"
+          },
+          {
+            "name": "last_volume_update",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Milestone",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "status",
+            "type": "u8"
+          },
+          {
+            "name": "completed_at",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "approved_at",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "dispute_reason",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "dispute_id",
+            "type": {
+              "option": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "MilestoneApprovedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "milestone_index",
+            "type": "u8"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "fee_amount",
+            "type": "u64"
+          },
+          {
+            "name": "approved_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MilestoneCompletedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trust_pay",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "milestone_index",
+            "type": "u8"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "completed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MilestoneInput",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TrustPay",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "contract_type",
+            "type": "u8"
+          },
+          {
+            "name": "seed",
+            "type": "u64"
+          },
+          {
+            "name": "payer",
+            "type": "pubkey"
+          },
+          {
+            "name": "recipient",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "terms_and_conditions",
+            "type": "string"
+          },
+          {
+            "name": "total_contract_amount",
+            "type": "u64"
+          },
+          {
+            "name": "deadline",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "acceptance_timestamp",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "contract_status",
+            "type": "u8"
+          },
+          {
+            "name": "fee_percentage",
+            "type": "u16"
+          },
+          {
+            "name": "fee_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "fee",
+            "type": "u64"
+          },
+          {
+            "name": "milestones",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Milestone"
+                }
+              }
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}
