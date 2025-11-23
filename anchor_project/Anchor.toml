@@ -5,15 +5,15 @@ package_manager = "yarn"
 resolution = true
 skip-lint = false
 
-[programs.localnet]
-anchor_project = "GPckXY3ag2wYLkUAriq4Cmpa4yZNRr7SM7YXKR2KNd5N"
+[programs.devnet]
+anchor_project = "CtvFQBDX6GdgDL5tS8spw7rZomT2ZwAxm6C9UaEe6hxo"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
-wallet = "~/.config/solana/id.json"
+cluster = "devnet"
+wallet = "~/keypairs/ackee/ack4hThDoBbzRqs13Nq7o3h1juM8UFJtQf6csS8ZaLR.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

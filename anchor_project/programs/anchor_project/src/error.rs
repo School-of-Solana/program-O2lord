@@ -16,6 +16,8 @@ pub enum TrustPayError {
     InvalidDeadline,
     #[msg("Dispute resolution mechanism description is too long (max 200 characters).")]
     DisputeResolutionTooLong,
+    #[msg("Dispute resolution mechanism description is too long (max 200 characters).")]
+    TermsAndConditionsTooLong,
     #[msg("Contract has not been accepted yet.")]
     ContractNotAccepted,
     #[msg("Milestone amounts do not sum to total contract amount.")]
@@ -56,4 +58,6 @@ pub enum TrustPayError {
     InvalidRole,
     #[msg("Invalid contract type. Must be 0 (one-time payment) or 1 (milestone payment).")]
     InvalidContractType,
+    #[msg("Payer Mismatch")]
+    PayerMismatch,
 }

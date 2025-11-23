@@ -11,6 +11,8 @@ pub struct TrustPay {
     pub mint: Pubkey,
     #[max_len(50)]
     pub title: String,
+    #[max_len(200)]
+    pub terms_and_conditions: String,
     pub total_contract_amount: u64,
     pub deadline: Option<u64>,
     pub acceptance_timestamp: Option<i64>,
